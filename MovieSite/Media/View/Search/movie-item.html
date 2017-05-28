@@ -1,0 +1,19 @@
+<if condition="count($movie_list) eq 0">
+	<span style="display: block; width: 240px; height: 80px; font-size: 20px; margin: 10px auto;">没有更多...</span>
+<else />
+	<volist name="movie_list" id="item">
+	<li>
+		<span>{$item.categorys|substr=0,24}</span>
+		<a href="javascript:;" media-guid="{$item.guid}" media-cover="" onclick="purchaseItem(this);">
+			<img src="
+				<if condition="$item.src_root eq ''">
+					__ROOT__{$item.cover}
+			    <else />
+			    	{$item.src_root}{$item.cover}
+				</if>
+			">
+		</a>
+		<p><span>({$item.price}金币)</span>{$item.title|substr=0,48}</p>
+	</li>
+	</volist>
+</if>
