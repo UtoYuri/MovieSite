@@ -108,6 +108,7 @@
 }
 .waterfall-main .movie-list li p{
 	font-size: 12px;
+	overflow: hidden;
 }
 .waterfall-main .movie-list li p span{
 	font-size: 12px;

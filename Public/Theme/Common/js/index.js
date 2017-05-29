@@ -63,7 +63,7 @@ function changeMovieGettingRule(obj){
 	}else{
 		defaultCurlUrl = "/Media/Search/rank";
 		defaultCurlFormData = {
-			'category' : $this.text(),
+			'category' : $this.attr('rank-name'),
 			'page' : 1,
 			'num' : 20
 		};
