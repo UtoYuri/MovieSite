@@ -124,4 +124,36 @@ class SearchController extends Controller {
             $this->display('movie-item');
         }
     }
+
+    /** 
+     * 获取分类信息API
+     * @param string $format 返回数据格式
+     * @return 分类信息
+     */  
+    public function cate($format = 'html'){
+
+        // 创建小说模型
+        $movie_model = D('Movie');
+
+        // 获取小说列表
+        $cate_info_list = $movie_model->get_cate_info_list($category, $page, $num);
+
+        // 返回检索结果
+        if ($format == 'json'){
+            $this->ajaxReturn(array(
+                'success' => true, 
+                'msg' => '获取成功', 
+                'data' => $cate_info_list, 
+            ), 'json');
+        }else if($format == 'xml'){
+            $this->xmlReturn(array(
+                'success' => true, 
+                'msg' => '获取成功', 
+                'data' => $cate_info_list, 
+            ), 'json');
+        }else{
+            $this->assign('cate_info_list', $cate_info_list);
+            $this->display('cate-info-item');
+        }
+    }
 }

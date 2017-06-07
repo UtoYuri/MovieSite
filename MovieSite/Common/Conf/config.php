@@ -1,5 +1,19 @@
 <?php
 return array(
+
+    /* 网站设置 */
+    'SITE_TITLE'            =>  '铁头影城',       // 标题
+    'SITE_SUBTITLE'         =>  '嫩头青的夜场影院',       // 副标题
+    'SITE_AUTHOR'           =>  '铁头宿舍',       // 作者
+    'SITE_KEY'              =>  '铁头影城，海量片源在线观看。',       // 关键字
+    'SITE_DESC'             =>  '铁头影城，海量片源在线观看。 - 铁头宿舍出品',       // 描述
+    'SITE_LINKS'            =>  array(  // 友情链接
+        array('title' => '友情链接', 'url' => '#'),
+        array('title' => '淘宝店', 'url' => '#'),
+        array('title' => '关于我们', 'url' => '#'),
+    ),
+
+
     /* Cookie设置 */
     'COOKIE_EXPIRE'         =>  7,       // Cookie有效期
 

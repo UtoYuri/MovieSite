@@ -96,4 +96,19 @@ class MovieModel extends Model {
                     ->select();
         return $result;
     }
+
+    /** 
+     * 获取分类信息
+     * @return array 列表
+     */  
+    public function get_cate_info_list(){
+        $condition = array(
+                    'is_active' => true,
+                );
+        $result = $this->table('t_movie_cate')
+                    ->order('create_time ASC')
+                    ->where($condition)
+                    ->select();
+        return $result;
+    }
 }

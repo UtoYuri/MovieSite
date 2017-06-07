@@ -4,7 +4,7 @@
 	<volist name="movie_list" id="item">
 	<li>
 		<span>{$item.categorys|substr=0,24}</span>
-		<a href="javascript:;" media-guid="{$item.guid}" media-cover="__ROOT__/Public/Theme/Common/images/poster.png" onclick="purchaseItem(this);">
+		<a href="javascript:;" media-guid="{$item.guid}" media-cover="__ROOT__/Public/Theme/Common/images/poster.png" onclick="IndexUI().purchaseItem(this);">
 			<img src="<if condition="$item.src_root eq ''">__ROOT__{$item.cover}
 			    <else />{$item.src_root}{$item.cover}
 				</if>">

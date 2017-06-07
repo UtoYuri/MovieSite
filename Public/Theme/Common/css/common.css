@@ -10,7 +10,7 @@ body{
 	right: 0;
 	height: 100%;
 	overflow: hidden;
-    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .header,.footer{
     background-color: #222;
@@ -81,7 +81,7 @@ body{
 }
 .nav .hover-content{
 	display: none;
-    width: 240px;
+    width: 220px;
     background: #fff;
     position: absolute;
     left: -90px;
